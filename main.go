@@ -117,7 +117,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/ymgal"         // 月幕galgame
 
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"            // 鬼东西
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
+	 _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -201,9 +201,9 @@ func init() {
 		sus = append(sus, i)
 	}
 
-	// 通过代码写死的方式添加主人账号
+	 通过代码写死的方式添加主人账号
 	sus = append(sus, 1907431536)
-	// sus = append(sus, 87654321)
+	sus = append(sus, 2513945335)
 
 	if *runcfg != "" {
 		f, err := os.Open(*runcfg)
@@ -252,7 +252,7 @@ func main() {
 	// 帮助
 	zero.OnFullMatchGroup([]string{"/help", ".help", "菜单"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(message.Text(kanban.Banner, "\n可发送\"/服务列表\"查看 bot 功能"))
+			ctx.SendChain(message.Text(kanban.Banner, "\n可发送\"/服务列表\"看 bot 功能"))查
 		})
 	zero.OnFullMatch("查看zbp公告", zero.OnlyToMe, zero.AdminPermission).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
